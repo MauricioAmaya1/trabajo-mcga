@@ -74,7 +74,7 @@ export const handleLogin = (email, password) => {
     })
 
     const options = {
-      baseURL: 'https://login-mcga-gramajo.herokuapp.com/',
+      baseURL: 'https://login-mcga-amaya.herokuapp.com/',
       timeout: 25000,
       method: 'POST',
       headers: {
@@ -82,7 +82,7 @@ export const handleLogin = (email, password) => {
       },
     }
 
-    return fetch(`https://login-mcga-gramajo.herokuapp.com/login`, { ...options, body: JSON.stringify({ email, password }) })
+    return fetch(`https://servidor-mcga-amaya.herokuapp.com/login`, { ...options, body: JSON.stringify({ email, password }) })
       .then(res => res.json())
       .then(data => {
         if (!data.success) {
